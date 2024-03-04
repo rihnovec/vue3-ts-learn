@@ -4,12 +4,20 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import {ILogoutEmit} from '../interfaces/logoutEmitInterface'
 
 export default defineComponent({
-  emits: ['logout'],
+  emits: {
+    logout(payload: ILogoutEmit | undefined = undefined) {
+      return payload && payload.id > 0
+    }
+  },
   setup (props, ctx) {
     function onClick() {
-      ctx.emit('logout')
+      ctx.emit('logout', {
+        id: 0,
+        login: 'a.rihnovec'
+      })
     }
 
     return {
