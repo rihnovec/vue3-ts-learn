@@ -2,18 +2,21 @@
   <div class="client-page">
     <LogoutButton @logout="onLogout" />
     <ToggleButton @toggle="onToggle" />
+    <MyButton @click="onClick" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
 import LogoutButton from '../components/LogoutButton.vue'
 import ToggleButton from '../components/ToggleButton.vue'
+import MyButton from '../components/MyButton.vue'
 
 export default defineComponent({
   components: {
     LogoutButton,
-    ToggleButton
+    ToggleButton,
+    MyButton
   },
   setup () {
     function onLogout() {
@@ -24,9 +27,18 @@ export default defineComponent({
       console.log('toggle...')
     }
 
+    function onClick() {
+      console.log('my button click')
+    }
+
+    function nativeOnClick() {
+
+    }
+
     return {
       onLogout,
-      onToggle
+      onToggle,
+      onClick
     }
   }
 })
