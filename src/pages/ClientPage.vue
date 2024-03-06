@@ -2,7 +2,7 @@
   <div class="client-page">
     <LogoutButton @logout="onLogout" />
     <ToggleButton @toggle="onToggle" />
-    <MyButton @click="onClick" />
+    <MyButton label="Тестировать атрибуты" @click="onClick" />
   </div>
 </template>
 
