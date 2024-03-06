@@ -2,7 +2,7 @@
   <div class="client-page">
     <LogoutButton @logout="onLogout" />
     <ToggleButton @toggle="onToggle" />
-    <MyButton label="Тестировать атрибуты" @click="onClick" />
+    <MyButton @click="onClick">Проверка атрибутов</MyButton>
   </div>
 </template>
 
@@ -29,10 +29,6 @@ export default defineComponent({
 
     function onClick() {
       console.log('my button click')
-    }
-
-    function nativeOnClick() {
-
     }
 
     return {

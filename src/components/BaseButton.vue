@@ -1,6 +1,6 @@
 <template>
   <button type="button" ref="btn">
-    <span>{{label}}</span>
+    <span><slot></slot></span>
   </button>
 </template>
 
@@ -9,10 +9,6 @@
   import type {Ref} from 'vue'
 
   const btn: Ref<HTMLElement | null> = ref(null)
-
-  defineProps({
-    label: String
-  })
 
   const attrs = useAttrs()
 
