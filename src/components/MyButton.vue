@@ -1,5 +1,7 @@
 <template>
-  <BaseButton><slot></slot></BaseButton>
+  <BaseButton>
+    <slot>Стандартный текст кнопки</slot>
+  </BaseButton>
 </template>
 
 <script setup lang="ts">
