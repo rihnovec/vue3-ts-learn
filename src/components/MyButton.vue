@@ -1,6 +1,6 @@
 <template>
-  <BaseButton>
-    <slot>Стандартный текст кнопки</slot>
+  <BaseButton v-slot="{text}">
+    {{ text }}
   </BaseButton>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <button type="button" ref="btn">
-    <span><slot></slot></span>
+    <span><slot :text="buttonText"></slot></span>
   </button>
 </template>
 
@@ -9,6 +9,7 @@
   import type {Ref} from 'vue'
 
   const btn: Ref<HTMLElement | null> = ref(null)
+  const buttonText: Ref<string> = ref('Текст на кнопке by ref')
 
   const attrs = useAttrs()
 
